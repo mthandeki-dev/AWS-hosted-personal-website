@@ -85,7 +85,11 @@
   async function submitQuestion(question) {
     const message = question.trim();
     if (busy || !message) return;
-    if (message.length > 600) { status.textContent = 'Please keep your question to 600 characters.'; return; }
+    if (message.length > 600)
+         { 
+            status.textContent = 'Please keep your question to 600 characters.';
+            return; 
+        }
     const run = generation;
     addMessage(message, 'user');
     input.value = '';
