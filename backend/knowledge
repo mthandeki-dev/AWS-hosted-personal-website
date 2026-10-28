@@ -1,0 +1,64 @@
+{
+  "owner": "Mthandeki Ndlambuzi",
+  "greeting": "Hi! I can help you get to know Mthandeki. Ask about his background, skills, interests, website or how to contact him.",
+  "thanks": "You're welcome! You can also ask about Mthandeki's skills, his AWS website or how to get in touch.",
+  "outOfScope": "I'm here to answer questions about Mthandeki and his portfolio, rather than general questions. Try asking about his background, skills, interests or this website.",
+  "unknown": "That detail hasn't been added to Mthandeki's approved profile yet. You can ask him directly at mthandekidevi@gmail.com.",
+  "previewFallback": "This preview uses saved answers, not a live AI connection. Try one of the suggested questions, or ask about Mthandeki's education, interests or AWS learning.",
+  "answers": [
+    {
+      "id": "about",
+      "topic": "A general introduction to Mthandeki and his approach to software",
+      "answer": "Mthandeki Ndlambuzi is a final-year Software Engineering student at WeThinkCode. He enjoys breaking complex problems down into clear, purposeful code and understanding how software, data and cloud systems fit together.",
+      "previewQuestions": ["Tell me about Mthandeki.", "Who is Mthandeki?", "Tell me about yourself", "Who are you?", "About me"]
+    },
+    {
+      "id": "education",
+      "topic": "His current studies; no graduation date, grades, degrees or certificates are supplied",
+      "answer": "Mthandeki is in his final year of Software Engineering at WeThinkCode. His portfolio also mentions learning cloud fundamentals through AWS Skill Builder.",
+      "previewQuestions": ["Where does he study?", "What is he studying?", "Where do you study?", "Education", "Tell me about his education"]
+    },
+    {
+      "id": "skills",
+      "topic": "Programming languages and website technologies; not years of experience or expert proficiency",
+      "answer": "His programming toolkit includes Java, Python, C++, SQL and MATLAB. This portfolio also lists HTML, CSS and JavaScript. He focuses on breaking problems down and building a practical software foundation.",
+      "previewQuestions": ["What are his skills?", "What languages does he use?", "What are your skills?", "My skills", "What programming languages do you know?"]
+    },
+    {
+      "id": "interests",
+      "topic": "Career and technical interests; no personal hobbies or private life information",
+      "answer": "Mthandeki is especially interested in data engineering, cloud engineering, machine learning and AI. He is curious about how data moves, how systems connect and how software can create useful possibilities.",
+      "previewQuestions": ["What are his interests?", "What are you interested in?", "Interests", "What does he want to learn?"]
+    },
+    {
+      "id": "aws-learning",
+      "topic": "Foundational AWS familiarity through Skill Builder, not a certification or production work history",
+      "answer": "Through AWS Skill Builder, Mthandeki has become familiar with the foundations of compute, storage, access management, load balancing and cloud architecture. This is a learning foundation, not a claim of AWS certification.",
+      "previewQuestions": ["What has he learned about AWS?", "Tell me about his AWS learning", "AWS learning", "Does he know AWS?"]
+    },
+    {
+      "id": "hosting",
+      "topic": "The planned static website hosting architecture: one S3 bucket and CloudFront",
+      "answer": "The website is designed for AWS: one private Amazon S3 bucket stores the HTML, CSS, JavaScript and images, and CloudFront delivers them to visitors over HTTPS. HTTP requests redirect to HTTPS. Origin Access Control lets CloudFront read the private bucket. Deployment is planned; this chat cannot verify that it is live.",
+      "previewQuestions": ["How is this website hosted?", "How is the website hosted?", "What is the website stack?", "This website", "What is in your toolkit?"]
+    },
+    {
+      "id": "project",
+      "topic": "The featured portfolio project and its purpose, not undisclosed projects or employers",
+      "answer": "This lightweight portfolio is Mthandeki's featured learning project. It uses HTML, CSS and JavaScript and is designed to put AWS storage, permissions, HTTPS delivery and deployment fundamentals into practice.",
+      "previewQuestions": ["What is his featured project?", "Tell me about this project", "What projects has he built?", "Projects"]
+    },
+    {
+      "id": "chatbot",
+      "topic": "How this portfolio chatbot works and the distinction between preview and Gemini modes",
+      "answer": "This assistant is designed to use Gemini to understand questions and select approved answers about Mthandeki. Its API key stays on the server, not in the website. Before Gemini is configured, a clearly labelled preview returns saved answers only.",
+      "previewQuestions": ["How does this chatbot work?", "Are you an AI?", "What powers this chatbot?", "Chatbot"]
+    },
+    {
+      "id": "contact",
+      "topic": "Public contact details already displayed in the portfolio; no promises or bookings",
+      "answer": "You can email Mthandeki at mthandekidevi@gmail.com or call 069 925 5329 (+27 69 925 5329). For opportunities, availability or details not listed here, contact him directly.",
+      "previewQuestions": ["How can I contact him?", "How can I contact you?", "Get in touch", "What is his email?", "What is his phone number?", "Contact"]
+    }
+  ]
+}
