@@ -440,3 +440,27 @@ img { display: block; max-width: 100%; }
   .project-panel * { color: #111 !important; }
   .contact-section { grid-template-columns: 1fr 1fr; }
 }
+
+/* Card straightens with a transition, not a looping animation. */
+.engineering-board {
+  transition: transform 420ms cubic-bezier(.2, .7, .2, 1), box-shadow 420ms ease;
+  transform-origin: center;
+}
+.engineering-board:hover, .engineering-board:focus-visible {
+  transform: rotate(0deg);
+  box-shadow: 0 22px 48px -30px rgba(22, 76, 54, .26);
+}
+.engineering-board:focus-visible { outline: 3px solid var(--green-medium); outline-offset: 6px; }
+.language-list { flex-wrap: wrap; min-width: 0; row-gap: 10px; }
+.hosting-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.hosting-card { padding: 30px; }
+.hosting-card .skill-card-top { margin-bottom: 23px; }
+.hosting-card h3 { font-size: 27px; margin-bottom: 11px; }
+.hosting-card > p { max-width: 370px; }
+.hosting-tag { display: inline-block; margin-top: 23px; font-size: 10px; font-weight: 600; color: var(--green); }
+@media (max-width: 650px) {
+  .hosting-grid { grid-template-columns: 1fr; }
+  .hosting-card { padding: 25px; }
+  .language-list { justify-content: flex-start; gap: 10px; }
+  .language-ribbon { align-items: flex-start; }
+}
