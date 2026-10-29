@@ -13,4 +13,6 @@
     "sync-preview": "node scripts/sync-preview.mjs",
     "check-api": "node scripts/check-api.mjs"
   }
+  
 }
+
