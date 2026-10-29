@@ -1,0 +1,13 @@
+# Keep secrets and local artifacts out of version control.
+.env
+.env.*
+!.env.example
+node_modules/
+.aws-sam/
+samconfig.toml
+.DS_Store
+*.log
+browser-artifacts/
+__pycache__/
+# Generated: rebuild with npm run package:lambda.
+deploy/*.zip
