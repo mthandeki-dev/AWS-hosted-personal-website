@@ -112,44 +112,74 @@
     <section class="skills-section section container" id="skills" aria-labelledby="skills-title">
       <div class="section-heading">
         <div><p class="eyebrow"><span class="section-number">02</span> THE WEBSITE TOOLKIT</p><h2 id="skills-title">Built for AWS.<br><span class="muted-heading">Kept simple.</span></h2></div>
-        <p class="section-intro">One S3 bucket for the files.<br>CloudFront for delivery.</p>
+        <p class="section-intro">S3 and CloudFront deliver the site.<br>API Gateway and Lambda power the chatbot.</p>
       </div>
       <div class="skill-grid hosting-grid">
         <article class="skill-card hosting-card">
           <div class="skill-card-top"><span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span><span class="skill-number">01 / STORAGE</span></div>
           <h3>Amazon S3</h3>
-          <p>A single private bucket for this website&rsquo;s HTML, CSS, JavaScript and images.</p>
-          <span class="hosting-tag">The files live here.</span>
+          <p>A private bucket stores this website&rsquo;s HTML, CSS, JavaScript and images.</p>
+          <span class="hosting-tag">The website files live here.</span>
         </article>
         <article class="skill-card skill-card-tint hosting-card">
           <div class="skill-card-top"><span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18a5 5 0 0 1-.6-10A7 7 0 0 1 19 9a4.5 4.5 0 0 1-.5 9H6Z"/><path d="M9 13h6m-2-2 2 2-2 2"/></svg></span><span class="skill-number">02 / DELIVERY</span></div>
           <h3>Amazon CloudFront</h3>
-          <p>Serves the website to visitors over HTTPS, with HTTP requests redirected to a secure connection.</p>
-          <span class="hosting-tag">The website reaches you here.</span>
+          <p>Delivers the website to visitors over HTTPS, with secure access to the private S3 files.</p>
+          <span class="hosting-tag">The website reaches visitors here.</span>
+        </article>
+        <article class="skill-card skill-card-tint hosting-card">
+          <div class="skill-card-top"><span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="12" r="2"/><circle cx="6" cy="19" r="2"/><path d="M8 6.5 16 11M8 17.5l8-4"/></svg></span><span class="skill-number">03 / CHAT API</span></div>
+          <h3>Amazon API Gateway</h3>
+          <p>Receives chatbot requests from the website and routes them to the Lambda backend.</p>
+          <span class="hosting-tag">Chat requests enter the backend here.</span>
+        </article>
+        <article class="skill-card hosting-card">
+          <div class="skill-card-top"><span class="skill-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 19 7-14 8 14h-5l-3-7-3 7H4Z"/><path d="M15 5h5v5"/></svg></span><span class="skill-number">04 / COMPUTE</span></div>
+          <h3>AWS Lambda</h3>
+          <p>Runs the Node.js chatbot logic, returning responses and calling Gemini when enabled.</p>
+          <span class="hosting-tag">The chatbot backend runs here.</span>
         </article>
       </div>
     </section>
 
     <section class="project-section container" id="project" aria-labelledby="project-title">
       <div class="project-panel">
-        <div class="project-top"><p class="eyebrow"><span class="section-number">03</span> FEATURED LEARNING PROJECT</p><span class="project-status"><span aria-hidden="true"></span> AWS deployment planned</span></div>
+        <div class="project-top"><p class="eyebrow"><span class="section-number">03</span> FEATURED LEARNING PROJECT</p><span class="project-status"><span aria-hidden="true"></span> Hosted on AWS</span></div>
         <div class="project-grid">
-          <div class="project-copy"><h2 id="project-title">A small site.<br>A clear cloud story.</h2><p>You&rsquo;re looking at the project: a lightweight portfolio designed for Amazon S3 and CloudFront. A practical next step in turning cloud fundamentals into hands-on understanding.</p><div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>AWS</span></div></div>
+          <div class="project-copy">
+            <h2 id="project-title">A small site.<br>A clear cloud story.</h2>
+            <p>This portfolio combines a static website with a serverless chatbot backend. CloudFront serves the website from a private S3 bucket, while API Gateway connects chat requests to Lambda. The backend can call Gemini without exposing the API key in the browser.</p>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>AWS serverless</span></div>
+          </div>
           <div class="architecture-card">
-            <span class="architecture-label">THE PLANNED ARCHITECTURE</span>
-            <div class="architecture-flow" role="img" aria-label="A visitor connects over HTTPS to CloudFront. CloudFront uses Origin Access Control to read files from a private Amazon S3 bucket.">
-              <div class="architecture-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 9h20m-16-3h.01M9 6h.01"/></svg><strong>Browser</strong><span>Visitor</span></div><div class="flow-arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div><div class="architecture-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M6 18a5 5 0 0 1-.6-10A7 7 0 0 1 19 9a4.5 4.5 0 0 1-.5 9H6Z"/></svg><strong>CloudFront</strong><span>HTTPS delivery</span></div><div class="flow-arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div><div class="architecture-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><strong>Amazon S3</strong><span>Private files</span></div>
+            <span class="architecture-label">THE AWS ARCHITECTURE</span>
+            <div class="architecture-path-label">01 / WEBSITE DELIVERY</div>
+            <div class="architecture-flow" role="img" aria-label="Website delivery: the visitor's browser connects to CloudFront, which serves files from a private Amazon S3 bucket.">
+              <div class="architecture-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 9h20m-16-3h.01M9 6h.01"/></svg><strong>Browser</strong><span>Visitor</span></div>
+              <div class="flow-arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div>
+              <div class="architecture-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 18a5 5 0 0 1-.6-10A7 7 0 0 1 19 9a4.5 4.5 0 0 1-.5 9H6Z"/></svg><strong>CloudFront</strong><span>HTTPS delivery</span></div>
+              <div class="flow-arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div>
+              <div class="architecture-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg><strong>Amazon S3</strong><span>Private files</span></div>
             </div>
-            <div class="architecture-security"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></svg><span>Origin Access Control connects CloudFront to S3.</span></div>
-            <div class="architecture-bottom"><span>Static website hosting. Private S3 origin.</span><span aria-hidden="true">&#8599;</span></div>
+            <div class="architecture-path-label">02 / CHATBOT BACKEND</div>
+            <div class="architecture-flow" role="img" aria-label="Chatbot backend: the browser sends a question to API Gateway, which invokes AWS Lambda to handle the chatbot request.">
+              <div class="architecture-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="M2 9h20m-16-3h.01M9 6h.01"/></svg><strong>Browser</strong><span>Chat request</span></div>
+              <div class="flow-arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div>
+              <div class="architecture-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="5" r="2"/><circle cx="18" cy="12" r="2"/><circle cx="6" cy="19" r="2"/><path d="M8 6.5 16 11M8 17.5l8-4"/></svg><strong>API Gateway</strong><span>Request routing</span></div>
+              <div class="flow-arrow" aria-hidden="true"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></div>
+              <div class="architecture-node"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 19 7-14 8 14h-5l-3-7-3 7H4Z"/><path d="M15 5h5v5"/></svg><strong>AWS Lambda</strong><span>Chatbot logic</span></div>
+            </div>
+            <div class="architecture-security"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/></svg><span>Private S3 origin. Gemini credentials stay on the backend.</span></div>
+            <div class="architecture-bottom"><span>Static frontend + serverless chatbot backend.</span><span aria-hidden="true">&#8599;</span></div>
           </div>
         </div>
         <details class="project-details">
-          <summary><span>What this project is designed to demonstrate</span><span class="details-toggle" aria-hidden="true">+</span></summary>
+          <summary><span>What this project demonstrates</span><span class="details-toggle" aria-hidden="true">+</span></summary>
           <div class="project-details-content">
-            <div><h3>Storage &amp; permissions</h3><p>Store the site in S3, keep the bucket private and allow the intended CloudFront distribution to read its files.</p></div>
-            <div><h3>Delivery &amp; HTTPS</h3><p>Serve the portfolio through CloudFront and use its HTTPS address without buying a custom domain.</p></div>
-            <div><h3>Deployment &amp; updates</h3><p>Upload a small set of static files, understand caching and test the site after each update.</p></div>
+            <div><h3>Storage &amp; access</h3><p>The site lives in a private S3 bucket, which CloudFront accesses using Origin Access Control.</p></div>
+            <div><h3>Secure delivery</h3><p>CloudFront serves the static website over HTTPS and redirects HTTP requests to a secure connection.</p></div>
+            <div><h3>API routing</h3><p>API Gateway accepts chatbot requests at the chat endpoint and invokes the Lambda function.</p></div>
+            <div><h3>Serverless backend</h3><p>Lambda runs the chatbot&rsquo;s Node.js code, returning saved answers or calling Gemini when enabled.</p></div>
           </div>
         </details>
       </div>
